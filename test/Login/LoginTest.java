@@ -17,11 +17,11 @@ public class LoginTest {
     public void testUsernameCorrectlyFormatted() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee_t",
+                "kyl_1",
                 "Ch&&sec@ke99!",
-                "+27828404613"
+                "+27838968976"
         );
 
         assertTrue(user.checkUserName());
@@ -31,11 +31,11 @@ public class LoginTest {
     public void testUsernameIncorrectlyFormatted() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee!!!!!!!",
+                "kyle!!!!!!!",
                 "Ch&&sec@ke99!",
-                "+27828404613"
+                "+27838968976"
         );
 
         assertFalse(user.checkUserName());
@@ -45,11 +45,11 @@ public class LoginTest {
     public void testPasswordMeetsComplexity() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee_t",
+                "kyl_1",
                 "Ch&&sec@ke99!",
-                "+27828404613"
+                "+27838968976"
         );
 
         assertTrue(user.checkPasswordComplexity());
@@ -59,11 +59,11 @@ public class LoginTest {
     public void testPasswordDoesNotMeetComplexity() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee_t",
+                "kyl_1",
                 "password",
-                "+27828404613"
+                "+27838968976"
         );
 
         assertFalse(user.checkPasswordComplexity());
@@ -73,11 +73,11 @@ public class LoginTest {
     public void testCellPhoneCorrectlyFormatted() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee_t",
+                "kyl_1",
                 "Ch&&sec@ke99!",
-                "+27828404613"
+                "+27838968976"
         );
 
         assertTrue(user.checkCellPhoneNumber());
@@ -87,9 +87,9 @@ public class LoginTest {
     public void testCellPhoneIncorrectlyFormatted() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee_t",
+                "kyl_1",
                 "Ch&&sec@ke99!",
                 "08966553"
         );
@@ -101,15 +101,15 @@ public class LoginTest {
     public void testLoginSuccessful() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee_t",
+                "kyl_1",
                 "Ch&&sec@ke99!",
-                "+27828404613"
+                "+27838968976"
         );
 
         assertTrue(
-                user.loginUser("lee_t", "Ch&&sec@ke99!")
+                user.loginUser("kyl_1", "Ch&&sec@ke99!")
         );
     }
 
@@ -117,11 +117,11 @@ public class LoginTest {
     public void testLoginFailed() {
 
         Login user = new Login(
-                "Lethabo",
+                "Kyle",
                 "Theo",
-                "lee_t",
+                "kyl_1",
                 "Ch&&sec@ke99!",
-                "+27828404613"
+                "+27838968976"
         );
 
         assertFalse(
